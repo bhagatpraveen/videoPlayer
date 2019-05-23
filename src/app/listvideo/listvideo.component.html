@@ -1,0 +1,18 @@
+<div class="conatiner">
+  <div class="videoPlayer">
+    <iframe id="video-frame" class="video" [src]="videoSrc">
+    </iframe>
+  </div>
+  <div class="videoList">
+    <li *ngFor="let data of movieArray; let i=index ">
+      <a>
+        <span class="title">{{data.name|UpperCasePipe}}</span>
+        <img src={{data.poster}} (click)="playVideo(data.trailer)">
+
+      </a>
+
+    </li>
+
+  </div>
+
+</div>
